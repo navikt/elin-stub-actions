@@ -1,0 +1,20 @@
+[
+  {
+    "dgjeldGebyrIlagtTI": 10000,
+    "dinnbetBelopUford": 50000,
+    "dtotLopBidrag": 15000,
+    "fakturaMaateBeskr": "Autogiro",
+    "sfnr": "03035127649",
+    "sisteAktivitetBeskr": "Innbetaling",
+    "statusInnkrevBeskr": "Status innkrevingsbeskrivelse"
+  },
+    {
+    "dgjeldGebyrIlagtTI": 10000,
+    "dinnbetBelopUford": 50000,
+    "dtotLopBidrag": 15000,
+    "fakturaMaateBeskr": "Autogiro",
+    "sfnr": "14116327334",
+    "sisteAktivitetBeskr": "Innbetaling",
+    "statusInnkrevBeskr": "Status innkrevingsbeskrivelse"
+  }
+]

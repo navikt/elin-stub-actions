@@ -1,0 +1,65 @@
+[
+  {
+    "barn": [
+      {
+        "dbidUtbetAndel": 129000,
+        "dbidUtbetTot": 165000,
+        "dbpBelGjeldOff": 45000,
+        "dbpBelGjeldPrivAndel": 40000,
+        "dbpBelGjeldPrivTot": 65000,
+        "dforskUtbetAndel": 35000,
+        "dforskUtbetTot": 23000,
+        "dtbidPerSisteDatoFom": "2010-01-01T08:00:00.000",
+        "dtbidPerSisteDatoTom": "2099-12-31T16:00:00.000",
+        "sfnr": "14070279119",
+        "sstoppFord": "string"
+      }
+    ],
+    "dbmGjeldFastsGebyr": 5000,
+    "dbmGjeldRest": 0,
+    "dbpGjeldFastGebyr": 8000,
+    "fnrBm": "03035127649",
+    "fnrBp": "14116327334",
+    "saksnr": 1900000,
+    "transaksjoner": [
+      {
+        "dopprBelop": 1650,
+        "drestBelop": 0,
+        "dtbidPerDatoFom": "1980-01-01T15:00:00.000",
+        "dtbidPerDatoTom": "2099-01-01T15:00:00.000",
+        "dtpostDato": "2019-11-11T15:00:00.000",
+        "dvalutaOpprBelop": 0,
+        "motpost": false,
+        "sbarnFnr": "14070279119",
+        "sbehandBeskr": "sbehandBeskr",
+        "sbehandKode": "sbehandKode",
+        "sbidragId": 1,
+        "ssoknType": "string",
+        "stransBeskr": "Privat bidrag",
+        "stransKildeFOnr": "14116327334",
+        "stransKode": "B1",
+        "stransMottakerFOnr": "03035127649",
+        "svalutaKode": "NOK"
+      },
+      {
+        "dopprBelop": 1650,
+        "drestBelop": 0,
+        "dtbidPerDatoFom": "1980-01-01T15:00:00.000",
+        "dtbidPerDatoTom": "2099-01-01T15:00:00.000",
+        "dtpostDato": "2019-11-11T15:00:00.000",
+        "dvalutaOpprBelop": 0,
+        "sbarnFnr": "14070279119",
+        "sbehandBeskr": "sbehandBeskr",
+        "sbehandKode": "sbehandKode",
+        "motpost": "true",
+        "sbidragId": 1,
+        "ssoknType": "",
+        "stransBeskr": "Privat bidrag utbetaling",
+        "stransKildeFOnr": "14116327334",
+        "stransKode": "B10",
+        "stransMottakerFOnr": "03035127649",
+        "svalutaKode": "NOK"
+      }
+    ]
+  }
+]

@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1c98adcb-b3bf-42ca-ad78-431b553ec297" activeEnvironment="Default" name="elin-stub-ws-q2" resourceRoot="${projectDir}" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="25800e01-1f8c-4b21-a19d-fb2ac6f5bab2" wsaVersion="NONE" name="BisysReskWSSoap" type="wsdl" bindingName="{http://www.spn.no/rtv/webservices/BisysReskWS}BisysReskWSSoap" soapVersion="1_1" anonymous="optional" definition="C:/workspaces/repos/nais/navikt/elin-stub/elin-stub-ws/src/main/resources/BisysReskWs.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\workspaces\repos\nais\navikt\elin-stub\elin-stub-ws\src\main\resources\BisysReskWs.wsdl"><con:part><con:url>file:\C:\workspaces\repos\nais\navikt\elin-stub\elin-stub-ws\src\main\resources\BisysReskWs.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.spn.no/rtv/webservices/BisysReskWS" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.spn.no/rtv/webservices/BisysReskWS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.spn.no/rtv/webservices/BisysReskWS">
+      <s:element name="rohPrSakPrBarn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="naksjonsKode" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="nBidragsSaksnr" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohPrSakPrBarnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rohPrSakPrBarnResult" type="tns:CResknObjectHolder"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CResknObjectHolder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_innParameter" type="tns:CinnParameter"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_utParameter" type="tns:CutParameter"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_retur" type="tns:Cretur"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CinnParameter">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_naksjonsKode" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_srapportType" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sfOnr" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_nbidragSaksnr" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_stransID" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtdatoFom" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtdatoTom" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_nmaxReturTrans" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sjournalpost" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_stypeEndring" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sfnrGjelder" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sfnrNy" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtgjelderDatoFOM" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtDagensDato" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sDokumentType" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sJournalStatus" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sInnhBeskr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sInnhBeskr2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_suDatertDok" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sTilgangsGruppe" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sArkivDel" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sInnholdsType" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sKopi" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sBehAns" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_savsMottUoff" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sSaksBehEnhet" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sSaksBehIdent" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sAvskr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sDokKat" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sDokTittel" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sPapirDok" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sDokStatus" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sVariant" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sLagrFormat" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sLagrEnhet" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sjEnhet" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CutParameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_colCtransaksjon" type="tns:ArrayOfCtransaksjon"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_colCbidragSak" type="tns:ArrayOfCbidragSak"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_colCpersOrg" type="tns:ArrayOfCpersOrg"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_colCgjeldBetOrdn" type="tns:ArrayOfCgjeldBetOrdn"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_colCnyBetOrdn" type="tns:ArrayOfCnyBetOrdn"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_colCinnkrevAktivHist" type="tns:ArrayOfCinnkrevAktivHist"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sjournalpost" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCtransaksjon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Ctransaksjon" nillable="true" type="tns:Ctransaksjon"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Ctransaksjon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_stransID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_stransKode" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_stransBeskr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sbehandKode" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sbehandBeskr" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtpostDato" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_stransKildeFOnr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_stransMottakerFOnr" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dopprBelop" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_drestBelop" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dvalutaOpprBelop" type="s:decimal"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_svalutaKode" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_nbidragSaksnr" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtbidPerDatoFom" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtbidPerDatoTom" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sbarnFnr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sbidragId" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sSoknType" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCbidragSak">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CbidragSak" nillable="true" type="tns:CbidragSak"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CbidragSak">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_nBidragsSaksnr" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dbmGjeldFastsGebyr" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dbmGjeldRest" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dbpGjeldFastGebyr" type="s:decimal"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_colCbarnISak" type="tns:ArrayOfCbarnISak"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCbarnISak">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CbarnISak" nillable="true" type="tns:CbarnISak"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CbarnISak">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_sFnr" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dbpBelGjeldOff" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dbpBelGjeldPrivTot" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dbidUtbetTot" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dforskUtbetTot" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dbpBelGjeldPrivAndel" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dbidUtbetAndel" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dforskUtbetAndel" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtbidPerSisteDatoFom" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtbidPerSisteDatoTom" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sstoppFord" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCpersOrg">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CpersOrg" nillable="true" type="tns:CpersOrg"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CpersOrg">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_sfnr" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtotLopBidrag" type="s:decimal"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_statusInnkrevBeskr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_fakturaMaateBeskr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sisteAktivitetBeskr" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dinnbetBelopUford" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dgjeldGebyrIlagtTI" type="s:decimal"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCgjeldBetOrdn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CgjeldBetOrdn" nillable="true" type="tns:CgjeldBetOrdn"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CgjeldBetOrdn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_stypeBetOrdBesk" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sbetKildeFOnr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sbetKildeNavn" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtDatoSisteGiro" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtDatoNesteForfall" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dBelop" type="s:decimal"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtDatoSistEndret" type="s:dateTime"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sAarsakSistEndret" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dSumUbetOrdning" type="s:decimal"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCnyBetOrdn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CnyBetOrdn" nillable="true" type="tns:CnyBetOrdn"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CnyBetOrdn">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtDatoFOM" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dBelop" type="s:decimal"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sBetKildeNyFOnr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sBetKildeNyNavn" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCinnkrevAktivHist">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CinnkrevAktivHist" nillable="true" type="tns:CinnkrevAktivHist"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CinnkrevAktivHist">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_shendBeskr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sFOnr" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sNavn" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dtDatoFOM" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="_dBelopHendelse" type="s:decimal"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Cretur">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="_skode" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="_sbeskr" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="rohPrPersPrSakPrBarn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="naksjonsKode" type="s:int"/>
+            <s:element minOccurs="0" maxOccurs="1" name="sFNR_ORGNR" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohPrPersPrSakPrBarnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rohPrPersPrSakPrBarnResult" type="tns:CResknObjectHolder"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohTransPrSak">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="naksjonsKode" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="nBidragsSaksnr" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dtdatoFom" type="s:dateTime"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dtdatoTom" type="s:dateTime"/>
+            <s:element minOccurs="1" maxOccurs="1" name="nmaxReturTrans" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohTransPrSakResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rohTransPrSakResult" type="tns:CResknObjectHolder"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohTransPrPersPrOrg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="naksjonsKode" type="s:int"/>
+            <s:element minOccurs="0" maxOccurs="1" name="sFNR_ORGNR" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dtdatoFom" type="s:dateTime"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dtdatoTom" type="s:dateTime"/>
+            <s:element minOccurs="1" maxOccurs="1" name="nmaxReturTrans" type="s:int"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohTransPrPersPrOrgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rohTransPrPersPrOrgResult" type="tns:CResknObjectHolder"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohTransPrTransID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="naksjonsKode" type="s:int"/>
+            <s:element minOccurs="0" maxOccurs="1" name="sTransID" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dtdatoFom" type="s:dateTime"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dtdatoTom" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohTransPrTransIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rohTransPrTransIDResult" type="tns:CResknObjectHolder"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohInnkrevInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="naksjonsKode" type="s:int"/>
+            <s:element minOccurs="0" maxOccurs="1" name="sFNR_ORGNR" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohInnkrevInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rohInnkrevInfoResult" type="tns:CResknObjectHolder"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohKontoutdrag">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="naksjonsKode" type="s:int"/>
+            <s:element minOccurs="0" maxOccurs="1" name="sysId" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="brevRef" type="s:long"/>
+            <s:element minOccurs="1" maxOccurs="1" name="nbidragSaksnr" type="s:int"/>
+            <s:element minOccurs="0" maxOccurs="1" name="sFNR_ORGNR" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="srapportType" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dtdatoFom" type="s:dateTime"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dtdatoTom" type="s:dateTime"/>
+            <s:element minOccurs="0" maxOccurs="1" name="MQReplyQueue" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohKontoutdragResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rohKontoutdragResult" type="tns:CResknObjectHolder"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohRMEndreFNR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="naksjonsKode" type="s:int"/>
+            <s:element minOccurs="0" maxOccurs="1" name="stypeEndring" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="nbidragSaksnr" type="s:int"/>
+            <s:element minOccurs="0" maxOccurs="1" name="sfnr" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="sfnrGjelder" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="sfnrNy" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="dtdatoGjelderFOM" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="rohRMEndreFNRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rohRMEndreFNRResult" type="tns:CResknObjectHolder"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CResknObjectHolder" nillable="true" type="tns:CResknObjectHolder"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="rohPrSakPrBarnSoapIn">
+    <wsdl:part name="parameters" element="tns:rohPrSakPrBarn"/>
+  </wsdl:message>
+  <wsdl:message name="rohPrSakPrBarnSoapOut">
+    <wsdl:part name="parameters" element="tns:rohPrSakPrBarnResponse"/>
+  </wsdl:message>
+  <wsdl:message name="rohPrPersPrSakPrBarnSoapIn">
+    <wsdl:part name="parameters" element="tns:rohPrPersPrSakPrBarn"/>
+  </wsdl:message>
+  <wsdl:message name="rohPrPersPrSakPrBarnSoapOut">
+    <wsdl:part name="parameters" element="tns:rohPrPersPrSakPrBarnResponse"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrSakSoapIn">
+    <wsdl:part name="parameters" element="tns:rohTransPrSak"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrSakSoapOut">
+    <wsdl:part name="parameters" element="tns:rohTransPrSakResponse"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrPersPrOrgSoapIn">
+    <wsdl:part name="parameters" element="tns:rohTransPrPersPrOrg"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrPersPrOrgSoapOut">
+    <wsdl:part name="parameters" element="tns:rohTransPrPersPrOrgResponse"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrTransIDSoapIn">
+    <wsdl:part name="parameters" element="tns:rohTransPrTransID"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrTransIDSoapOut">
+    <wsdl:part name="parameters" element="tns:rohTransPrTransIDResponse"/>
+  </wsdl:message>
+  <wsdl:message name="rohInnkrevInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:rohInnkrevInfo"/>
+  </wsdl:message>
+  <wsdl:message name="rohInnkrevInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:rohInnkrevInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="rohKontoutdragSoapIn">
+    <wsdl:part name="parameters" element="tns:rohKontoutdrag"/>
+  </wsdl:message>
+  <wsdl:message name="rohKontoutdragSoapOut">
+    <wsdl:part name="parameters" element="tns:rohKontoutdragResponse"/>
+  </wsdl:message>
+  <wsdl:message name="rohRMEndreFNRSoapIn">
+    <wsdl:part name="parameters" element="tns:rohRMEndreFNR"/>
+  </wsdl:message>
+  <wsdl:message name="rohRMEndreFNRSoapOut">
+    <wsdl:part name="parameters" element="tns:rohRMEndreFNRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="rohPrSakPrBarnHttpPostIn">
+    <wsdl:part name="naksjonsKode" type="s:string"/>
+    <wsdl:part name="nBidragsSaksnr" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="rohPrSakPrBarnHttpPostOut">
+    <wsdl:part name="Body" element="tns:CResknObjectHolder"/>
+  </wsdl:message>
+  <wsdl:message name="rohPrPersPrSakPrBarnHttpPostIn">
+    <wsdl:part name="naksjonsKode" type="s:string"/>
+    <wsdl:part name="sFNR_ORGNR" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="rohPrPersPrSakPrBarnHttpPostOut">
+    <wsdl:part name="Body" element="tns:CResknObjectHolder"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrSakHttpPostIn">
+    <wsdl:part name="naksjonsKode" type="s:string"/>
+    <wsdl:part name="nBidragsSaksnr" type="s:string"/>
+    <wsdl:part name="dtdatoFom" type="s:string"/>
+    <wsdl:part name="dtdatoTom" type="s:string"/>
+    <wsdl:part name="nmaxReturTrans" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrSakHttpPostOut">
+    <wsdl:part name="Body" element="tns:CResknObjectHolder"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrPersPrOrgHttpPostIn">
+    <wsdl:part name="naksjonsKode" type="s:string"/>
+    <wsdl:part name="sFNR_ORGNR" type="s:string"/>
+    <wsdl:part name="dtdatoFom" type="s:string"/>
+    <wsdl:part name="dtdatoTom" type="s:string"/>
+    <wsdl:part name="nmaxReturTrans" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrPersPrOrgHttpPostOut">
+    <wsdl:part name="Body" element="tns:CResknObjectHolder"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrTransIDHttpPostIn">
+    <wsdl:part name="naksjonsKode" type="s:string"/>
+    <wsdl:part name="sTransID" type="s:string"/>
+    <wsdl:part name="dtdatoFom" type="s:string"/>
+    <wsdl:part name="dtdatoTom" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="rohTransPrTransIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:CResknObjectHolder"/>
+  </wsdl:message>
+  <wsdl:message name="rohInnkrevInfoHttpPostIn">
+    <wsdl:part name="naksjonsKode" type="s:string"/>
+    <wsdl:part name="sFNR_ORGNR" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="rohInnkrevInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:CResknObjectHolder"/>
+  </wsdl:message>
+  <wsdl:message name="rohKontoutdragHttpPostIn">
+    <wsdl:part name="naksjonsKode" type="s:string"/>
+    <wsdl:part name="sysId" type="s:string"/>
+    <wsdl:part name="brevRef" type="s:string"/>
+    <wsdl:part name="nbidragSaksnr" type="s:string"/>
+    <wsdl:part name="sFNR_ORGNR" type="s:string"/>
+    <wsdl:part name="srapportType" type="s:string"/>
+    <wsdl:part name="dtdatoFom" type="s:string"/>
+    <wsdl:part name="dtdatoTom" type="s:string"/>
+    <wsdl:part name="MQReplyQueue" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="rohKontoutdragHttpPostOut">
+    <wsdl:part name="Body" element="tns:CResknObjectHolder"/>
+  </wsdl:message>
+  <wsdl:message name="rohRMEndreFNRHttpPostIn">
+    <wsdl:part name="naksjonsKode" type="s:string"/>
+    <wsdl:part name="stypeEndring" type="s:string"/>
+    <wsdl:part name="nbidragSaksnr" type="s:string"/>
+    <wsdl:part name="sfnr" type="s:string"/>
+    <wsdl:part name="sfnrGjelder" type="s:string"/>
+    <wsdl:part name="sfnrNy" type="s:string"/>
+    <wsdl:part name="dtdatoGjelderFOM" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="rohRMEndreFNRHttpPostOut">
+    <wsdl:part name="Body" element="tns:CResknObjectHolder"/>
+  </wsdl:message>
+  <wsdl:portType name="BisysReskWSSoap">
+    <wsdl:operation name="rohPrSakPrBarn">
+      <wsdl:input message="tns:rohPrSakPrBarnSoapIn"/>
+      <wsdl:output message="tns:rohPrSakPrBarnSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohPrPersPrSakPrBarn">
+      <wsdl:input message="tns:rohPrPersPrSakPrBarnSoapIn"/>
+      <wsdl:output message="tns:rohPrPersPrSakPrBarnSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrSak">
+      <wsdl:input message="tns:rohTransPrSakSoapIn"/>
+      <wsdl:output message="tns:rohTransPrSakSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrPersPrOrg">
+      <wsdl:input message="tns:rohTransPrPersPrOrgSoapIn"/>
+      <wsdl:output message="tns:rohTransPrPersPrOrgSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrTransID">
+      <wsdl:input message="tns:rohTransPrTransIDSoapIn"/>
+      <wsdl:output message="tns:rohTransPrTransIDSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohInnkrevInfo">
+      <wsdl:input message="tns:rohInnkrevInfoSoapIn"/>
+      <wsdl:output message="tns:rohInnkrevInfoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohKontoutdrag">
+      <wsdl:input message="tns:rohKontoutdragSoapIn"/>
+      <wsdl:output message="tns:rohKontoutdragSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohRMEndreFNR">
+      <wsdl:input message="tns:rohRMEndreFNRSoapIn"/>
+      <wsdl:output message="tns:rohRMEndreFNRSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="BisysReskWSHttpPost">
+    <wsdl:operation name="rohPrSakPrBarn">
+      <wsdl:input message="tns:rohPrSakPrBarnHttpPostIn"/>
+      <wsdl:output message="tns:rohPrSakPrBarnHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohPrPersPrSakPrBarn">
+      <wsdl:input message="tns:rohPrPersPrSakPrBarnHttpPostIn"/>
+      <wsdl:output message="tns:rohPrPersPrSakPrBarnHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrSak">
+      <wsdl:input message="tns:rohTransPrSakHttpPostIn"/>
+      <wsdl:output message="tns:rohTransPrSakHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrPersPrOrg">
+      <wsdl:input message="tns:rohTransPrPersPrOrgHttpPostIn"/>
+      <wsdl:output message="tns:rohTransPrPersPrOrgHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrTransID">
+      <wsdl:input message="tns:rohTransPrTransIDHttpPostIn"/>
+      <wsdl:output message="tns:rohTransPrTransIDHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohInnkrevInfo">
+      <wsdl:input message="tns:rohInnkrevInfoHttpPostIn"/>
+      <wsdl:output message="tns:rohInnkrevInfoHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohKontoutdrag">
+      <wsdl:input message="tns:rohKontoutdragHttpPostIn"/>
+      <wsdl:output message="tns:rohKontoutdragHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="rohRMEndreFNR">
+      <wsdl:input message="tns:rohRMEndreFNRHttpPostIn"/>
+      <wsdl:output message="tns:rohRMEndreFNRHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BisysReskWSSoap" type="tns:BisysReskWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="rohPrSakPrBarn">
+      <soap:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohPrSakPrBarn" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohPrPersPrSakPrBarn">
+      <soap:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohPrPersPrSakPrBarn" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrSak">
+      <soap:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrSak" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrPersPrOrg">
+      <soap:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrPersPrOrg" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrTransID">
+      <soap:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrTransID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohInnkrevInfo">
+      <soap:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohInnkrevInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohKontoutdrag">
+      <soap:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohKontoutdrag" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohRMEndreFNR">
+      <soap:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohRMEndreFNR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BisysReskWSSoap12" type="tns:BisysReskWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="rohPrSakPrBarn">
+      <soap12:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohPrSakPrBarn" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohPrPersPrSakPrBarn">
+      <soap12:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohPrPersPrSakPrBarn" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrSak">
+      <soap12:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrSak" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrPersPrOrg">
+      <soap12:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrPersPrOrg" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrTransID">
+      <soap12:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrTransID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohInnkrevInfo">
+      <soap12:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohInnkrevInfo" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohKontoutdrag">
+      <soap12:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohKontoutdrag" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohRMEndreFNR">
+      <soap12:operation soapAction="http://www.spn.no/rtv/webservices/BisysReskWS/rohRMEndreFNR" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BisysReskWSHttpPost" type="tns:BisysReskWSHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="rohPrSakPrBarn">
+      <http:operation location="/rohPrSakPrBarn"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohPrPersPrSakPrBarn">
+      <http:operation location="/rohPrPersPrSakPrBarn"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrSak">
+      <http:operation location="/rohTransPrSak"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrPersPrOrg">
+      <http:operation location="/rohTransPrPersPrOrg"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohTransPrTransID">
+      <http:operation location="/rohTransPrTransID"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohInnkrevInfo">
+      <http:operation location="/rohInnkrevInfo"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohKontoutdrag">
+      <http:operation location="/rohKontoutdrag"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rohRMEndreFNR">
+      <http:operation location="/rohRMEndreFNR"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BisysReskWS">
+    <wsdl:port name="BisysReskWSSoap" binding="tns:BisysReskWSSoap">
+      <soap:address location="http://elinweb.adeo.no/BisysReskWS/BisysReskWS.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="BisysReskWSSoap12" binding="tns:BisysReskWSSoap12">
+      <soap12:address location="http://elinweb.adeo.no/BisysReskWS/BisysReskWS.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="BisysReskWSHttpPost" binding="tns:BisysReskWSHttpPost">
+      <http:address location="http://elinweb.adeo.no/BisysReskWS/BisysReskWS.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://elinweb.adeo.no/BisysReskWS/BisysReskWS.asmx</con:endpoint></con:endpoints><con:operation id="ae86b815-a21b-4fd8-b617-54cf752cc939" isOneWay="false" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohInnkrevInfo" name="rohInnkrevInfo" bindingOperationName="rohInnkrevInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1b6017e3-e7a8-493e-8779-204d12e7b07c" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://elin-stub-ws-q2.nais.preprod.local/services/soap-api/elin-stub/BisysReskWSSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bis="http://www.spn.no/rtv/webservices/BisysReskWS">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <bis:rohInnkrevInfo>\r
+         <bis:naksjonsKode>10</bis:naksjonsKode>\r
+         <!--Optional:-->\r
+         <bis:sFNR_ORGNR>03035127649</bis:sFNR_ORGNR>\r
+      </bis:rohInnkrevInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohInnkrevInfo"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ca10af5b-cd2f-4ba6-8678-5b3b6b5107a7" isOneWay="false" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohKontoutdrag" name="rohKontoutdrag" bindingOperationName="rohKontoutdrag" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="33840a70-bfdc-4da6-af76-bf79118b536a" isOneWay="false" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohPrPersPrSakPrBarn" name="rohPrPersPrSakPrBarn" bindingOperationName="rohPrPersPrSakPrBarn" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5dafd730-8ea0-4ecc-b04c-82f06fa4860f" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://elin-stub-ws-q2.nais.preprod.local/services/soap-api/elin-stub/BisysReskWSSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bis="http://www.spn.no/rtv/webservices/BisysReskWS">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <bis:rohPrPersPrSakPrBarn>\r
+         <bis:naksjonsKode>10</bis:naksjonsKode>\r
+         <!--Optional:-->\r
+         <bis:sFNR_ORGNR>14116327334</bis:sFNR_ORGNR>\r
+      </bis:rohPrPersPrSakPrBarn>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohPrPersPrSakPrBarn"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="e597f0d6-294b-4df9-a205-8075a50f497d" isOneWay="false" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohPrSakPrBarn" name="rohPrSakPrBarn" bindingOperationName="rohPrSakPrBarn" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="98e17250-9ec7-43d9-8817-17dfae4bba0b" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://elin-stub-ws-q2.nais.preprod.local/services/soap-api/elin-stub/BisysReskWSSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bis="http://www.spn.no/rtv/webservices/BisysReskWS">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <bis:rohPrSakPrBarn>\r
+         <bis:naksjonsKode>10</bis:naksjonsKode>\r
+         <bis:nBidragsSaksnr>1900000</bis:nBidragsSaksnr>\r
+      </bis:rohPrSakPrBarn>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohPrSakPrBarn"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="16dc93d6-584f-453b-8dce-9fecf620ca98" isOneWay="false" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohRMEndreFNR" name="rohRMEndreFNR" bindingOperationName="rohRMEndreFNR" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="ef1b9a0e-2ab4-4ab0-962c-90e2add50ee3" isOneWay="false" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrPersPrOrg" name="rohTransPrPersPrOrg" bindingOperationName="rohTransPrPersPrOrg" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f26ceae5-e51a-4abc-a8cb-576b66e38823" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://elin-stub-ws-q2.nais.preprod.local/services/soap-api/elin-stub/BisysReskWSSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bis="http://www.spn.no/rtv/webservices/BisysReskWS">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <bis:rohTransPrPersPrOrg>\r
+         <bis:naksjonsKode>10</bis:naksjonsKode>\r
+         <!--Optional:-->\r
+         <bis:sFNR_ORGNR>14116327334</bis:sFNR_ORGNR>\r
+         <bis:dtdatoFom>2000-01-01T15:00:00.000</bis:dtdatoFom>\r
+         <bis:dtdatoTom>2020-01-01T15:00:00.000</bis:dtdatoTom>\r
+         <bis:nmaxReturTrans>5</bis:nmaxReturTrans>\r
+      </bis:rohTransPrPersPrOrg>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrPersPrOrg"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="dcdeac39-9835-4fd0-bcac-0c5e25895ea5" isOneWay="false" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrSak" name="rohTransPrSak" bindingOperationName="rohTransPrSak" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="23cbc51a-7ef8-464d-a264-c27cf83df785" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://elin-stub-ws-q2.nais.preprod.local/services/soap-api/elin-stub/BisysReskWSSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bis="http://www.spn.no/rtv/webservices/BisysReskWS">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <bis:rohTransPrSak>\r
+         <bis:naksjonsKode>10</bis:naksjonsKode>\r
+         <bis:nBidragsSaksnr>1900000</bis:nBidragsSaksnr>\r
+         <bis:dtdatoFom>2001-01-01T15:00:00.000</bis:dtdatoFom>\r
+         <bis:dtdatoTom>2020-01-01T15:00:00.000</bis:dtdatoTom>\r
+         <bis:nmaxReturTrans>5</bis:nmaxReturTrans>\r
+      </bis:rohTransPrSak>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrSak"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1548091b-576b-43a2-a180-33626b402076" isOneWay="false" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrTransID" name="rohTransPrTransID" bindingOperationName="rohTransPrTransID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="46703fe9-cced-4c28-9cd3-f8c4b6992248" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://elin-stub-ws-q2.nais.preprod.local/services/soap-api/elin-stub/BisysReskWSSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bis="http://www.spn.no/rtv/webservices/BisysReskWS">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <bis:rohTransPrTransID>\r
+         <bis:naksjonsKode>10</bis:naksjonsKode>\r
+         <!--Optional:-->\r
+         <bis:sTransID>5</bis:sTransID>\r
+         <bis:dtdatoFom>2000-01-01T15:00:00.000</bis:dtdatoFom>\r
+         <bis:dtdatoTom>2020-01-01T15:00:00.000</bis:dtdatoTom>\r
+      </bis:rohTransPrTransID>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.spn.no/rtv/webservices/BisysReskWS/rohTransPrTransID"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

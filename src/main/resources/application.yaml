@@ -1,0 +1,66 @@
+server:
+  port: 8080
+  
+---
+spring:
+  profiles: preprod
+  
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto: none
+spring.jpa.hibernate.show-sql: true
+
+spring.datasource.url: jdbc:postgresql://b27dbvl009.preprod.local:5432/elin-stub-db-${APP_ENVIRONMENT}
+vault.enable: true
+vault.database-backend: postgresql/preprod-fss
+vault.database-role: elin-stub-db-${APP_ENVIRONMENT}-user
+vault.database-adminrole: elin-stub-db-${APP_ENVIRONMENT}-user
+  
+---
+spring:
+  profiles: local
+  
+server:
+  port: 8085
+
+### H2 config ###  
+h2.tcp.expose.port: 9090
+spring.h2.console.enabled: true
+spring.datasource.url: jdbc:h2:mem:testdb
+
+# Common H2 Config
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.H2Dialect
+spring.datasource.driverClassName: org.h2.Driver
+spring.datasource.username: sa
+spring.datasource.password:
+spring.jpa.hibernate.ddl-auto: create
+
+---
+spring:
+  profiles: local-postgres, integration-test
+
+server:
+  port: 8085  
+
+# Local Postgres
+spring.jpa.hibernate.ddl-auto: none
+datasource.url: jdbc:postgresql://localhost:5432/testdb
+datasource.username: postgres
+datasource.password: admin
+datasource.platform: postgresql
+datasource.initialization-mode: always
+datasource.initialize: true
+datasource.continue-on-error: true
+datasource.driverClassName: org.postgresql.Driver
+
+---
+spring:
+  profiles: integration-test
+  
+# Obtain creds from vault (q2): 
+#    >vault login method=oidc
+#    >vault read postgresql/preprod-fss/creds/elin-stub-db-q2-user
+  
+# Remote Postgres
+datasource.url: jdbc:postgresql://b27dbvl009.preprod.local:5432/elin-stub-db-q2
+datasource.username: <obtain from Vault>
+datasource.password: <obtain from Vault>
