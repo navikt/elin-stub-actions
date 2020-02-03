@@ -1,0 +1,49 @@
+name: Build, push, and deploy
+on: push
+env:
+  BASE_IMAGE_WS: docker.pkg.github.com/${{ github.repository }}/elin-stub-ws
+jobs:
+  build:
+    name: elin-stub-ws build and deploy... 
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Code checkout...
+        uses: actions/checkout@v1
+
+      - name: Obtain tag...    
+        run: echo "::set-env name=TAG::$(git log -1 --pretty='%ad' --date=format:'%Y%m%d%H%M%S')-$(echo $GITHUB_SHA | cut -c1-7)"  
+
+      - name: Java 8 setup...
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8                       	          
+            
+      - name: Compile...
+        run: |
+          mvn versions:set -DnewVersion=${TAG}
+          echo "::set-env name=IMAGE_WS::$BASE_IMAGE_WS:$TAG"           
+          mvn -B install           
+          
+      - name: Docker build...
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          docker build --tag ${IMAGE_WS} .
+          docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY} -p ${GITHUB_TOKEN}
+          docker push ${IMAGE_WS}
+            
+  deploy:
+    name: Deploy elin-stub-ws to NAIS
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: nais/deploy/actions/deploy@v1
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-fss
+          RESOURCE: nais.yaml
+          VAR: namespace=t6,ingress=t6
+          ENVIRONMENT: dev-fss
+          TEAM: bidrag
