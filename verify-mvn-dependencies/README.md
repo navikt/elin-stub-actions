@@ -1,4 +1,4 @@
-# bidrag-actions/verify-dependencies
+# elin-stub-actions/verify-dependencies
 
 This action will verify that the project object model (pom) contains no SNAPSHOT dependencies.
 
