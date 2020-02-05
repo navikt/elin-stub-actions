@@ -1,6 +1,14 @@
 #!/bin/bash
 set -e
 
+if [ ! -z "$INPUT_SRC_FOLDER" ]
+then
+  cd "$INPUT_SRC_FOLDER"
+fi
+
+echo "Working directory"
+pwd
+
 if [ ! -f "$INPUT_RELEASE_VERSION_FILE" ]
   then
     >&2 echo "::error no $INPUT_RELEASE_VERSION_FILE found!"

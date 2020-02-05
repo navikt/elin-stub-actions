@@ -1,6 +1,9 @@
 name: Verify auto deploy
 description: Verifies that the new commit contains at least one section in the changelog file that contains the version that is to be released
 inputs:
+  src_folder:
+    description: the name of a source folder to run the commands form
+    required: false
   changelog_file:
     description: the file containing the changelog for this release
     required: true
