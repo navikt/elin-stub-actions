@@ -17,7 +17,7 @@ RELEASE_VERSION="$(cat "$INPUT_RELEASE_VERSION_FILE")"                # the rele
 RELEASE_TABLE="$(cat "$INPUT_CHANGELOG_FILE" | grep '|' )"            # the release table in the changelog file
 echo RELEASE_VERSION: $RELEASE_VERSION
 echo RELEASE_TABLE: $RELEASE_TABLE
-COUNT="$(echo "$RELEASE_TABLE" | grep --count "$RELEASE_VERSION" || true)" # count all mentions of 'RELEASE_VERSION' in the 'RELEASE_TABLE' from the changelog
+COUNT="$(echo $RELEASE_TABLE | grep --count $RELEASE_VERSION || true)" # count all mentions of 'RELEASE_VERSION' in the 'RELEASE_TABLE' from the changelog
 
 echo "echo Found $COUNT mentioning(s) of $RELEASE_VERSION in $INPUT_CHANGELOG_FILE."
 
