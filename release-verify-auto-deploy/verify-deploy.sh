@@ -21,6 +21,11 @@ COUNT="$(echo $RELEASE_TABLE | grep --count $RELEASE_VERSION || true)" # count a
 
 echo "echo Found $COUNT mentioning(s) of $RELEASE_VERSION in $INPUT_CHANGELOG_FILE."
 
+if [["$RELEASE_TABLE"==*"$RELEASE_VERSION"*]];
+  then
+    echo Great success!
+fi
+
 if [ "$COUNT" -lt 1 ]
   then
     echo This artifact is not eligable for auto deployment
