@@ -23,7 +23,7 @@ mvn -B release:update-versions
 
 # writes new snapshot version (1.2.4-SNAPSHOT) to file INPUT_NEW_SNAPSHOT_VERSION_FILE_NAME
 cat pom.xml | grep version | grep SNAPSHOT | \
-  sed 's/version//g' | sed 's/  //' | sed 's;[</>];;g' > "$INPUT_NEW_SNAPSHOT_VERSION_FILE_NAME"
+  sed 's/version//g' | sed 's/  //' | sed 's;[</>];;g' | xargs> "$INPUT_NEW_SNAPSHOT_VERSION_FILE_NAME"
 
 # Update to new release version with commit hash
 echo "Setting release version: $RELEASE_VERSION"
