@@ -28,6 +28,11 @@ if [ ! -f "$INPUT_NEW_SNAPSHOT_VERSION_FILE" ]
     exit 1;
 fi
 
+MAVEN_REPO=~/.m2
+
+settings='cat ~/.m2/settings.xml'
+echo "settings.xml: $settings"
+
 echo "Running release"
 mvn -B --settings maven-settings.xml  deploy -DskipTests -Dmaven.wagon.http.pool=false
 
