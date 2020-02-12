@@ -21,11 +21,6 @@ MAVEN_SETTINGS="<settings>
           <name>GitHub felles Apache Maven Packages</name>
           <url>https://maven.pkg.github.com/navikt/maven-release/</url>
         </repository>
-        <repository>
-          <id>central</id>
-          <name>Maven central</name>
-          <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
       </repositories>
     </profile>
   </profiles>
