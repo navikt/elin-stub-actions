@@ -28,7 +28,8 @@ if [ ! -f "$INPUT_NEW_SNAPSHOT_VERSION_FILE" ]
     exit 1;
 fi
 
-../setup-maven/setup.sh
+cd ../setup-maven
+setup.sh
 
 echo "Running release"
 mvn -B --settings maven-settings.xml deploy -DskipTests -Dmaven.wagon.http.pool=false
