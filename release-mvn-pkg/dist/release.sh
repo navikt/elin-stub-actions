@@ -28,7 +28,7 @@ if [ ! -f "$INPUT_NEW_SNAPSHOT_VERSION_FILE" ]
     exit 1;
 fi
 
-cd ../setup-maven
+cd ../../setup-maven
 setup.sh
 
 echo "Running release"
