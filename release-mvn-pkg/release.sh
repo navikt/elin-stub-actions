@@ -34,7 +34,7 @@ settings='cat ~/.m2/settings.xml'
 echo "settings.xml: $settings"
 
 echo "Running release"
-mvn -B --settings maven-settings.xml  deploy -DskipTests -Dmaven.wagon.http.pool=false
+mvn -B --settings maven-settings.xml  deploy -U -DskipTests -Dmaven.wagon.http.pool=false
 
 NEW_SNAPSHOT_VERSION=$(cat $INPUT_NEW_SNAPSHOT_VERSION_FILE)
 
